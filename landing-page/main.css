@@ -112,8 +112,10 @@ button {
     width: 200px;
     height: auto;
     border: 3px solid #3882f6;
-    border-radius: 5px;
-
+    border-radius: 8px;
+    aspect-ratio: 1 / 1; /* ensures height equals width */
+    object-fit: cover; /* crops the image to cover the area, maintaining its aspect ratio */
+    object-position: center; /* optional: centers the focal point of the crop (default) */
 }
 
 .picwcap p {
