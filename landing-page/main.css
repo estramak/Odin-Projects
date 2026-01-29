@@ -1,0 +1,182 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #e5e7eb;
+}
+
+button {
+    background-color: #3882f6;
+    padding: 5px 25px;
+    color: #f9faf8;
+    border-color: #3882f6;
+    border-width: 1px;
+    border-radius: 5px;
+    font-size: large;
+}
+
+/*adding flexbox to all parents*/
+.navbar, .context, .gallery, .highlight {
+    display: flex;
+    flex-direction: row;
+}
+
+.quote {
+    background-color: #e5e7eb;
+    color: #1f2937;
+}
+
+/*HERO SECTION*/
+
+.hero {
+    background-color: #1f2937;
+    padding: 15px 50px 50px 50px;
+}
+
+.navbar {
+    font-size: 18px;
+    max-width: 80%;
+    margin: auto;
+}
+
+.logo {
+    flex-grow: 1;
+    font-size: 24px;
+    font-weight: 800;
+    color: #f9faf8;
+}
+ /* there was hidden margin on the text, not the box itself, this got rid of that*/
+.logo p {
+    margin: 0;
+}
+
+
+.links {
+    flex-grow: 3;
+    text-align: right;
+}
+
+.context {
+    margin: 100px auto;
+    max-width: 70%;
+    
+}
+
+.introduction {
+    margin: auto;
+    max-width: 50%;
+    padding: 20px;
+}
+
+#maintitle {
+    font-size: 48px;
+    font-weight: 900;
+    color: #f9faf8;
+    margin: 0;
+}
+
+#sectitle {
+    font-size: 18px;
+    color: #e5e7eb;
+}
+
+/* RANDOM INFORMATION SECTION */
+
+.moreinfo {
+    margin: 100px 0;
+}
+
+.moreinfo h3 {
+    text-align: center;
+    font-size: 36px;
+    color: #1f2937;
+    font-weight: 900;
+}
+
+.gallery {
+    max-width: 60%;
+    margin: auto;
+    justify-content: space-around;
+    align-items: end;
+}
+
+.picwcap {
+    text-align: center;
+}
+
+.picwcap img {
+    width: 200px;
+    height: auto;
+    border: 3px solid #3882f6;
+    border-radius: 5px;
+
+}
+
+.picwcap p {
+    max-width: 200px;
+}
+
+
+/* QUOTE SECTION */
+
+.quote {
+    background-color: #e5e7eb;
+    padding: 150px 0;
+}
+
+#quote {
+    color: #1f2937;
+    font-size: 36px;
+    font-weight: 300;
+    font-style: italic;
+    max-width: 45%;
+    margin: auto;
+}
+
+#guywhosaidit {
+    color: #1f2937;
+    font-size: 24px;
+    font-weight: 900;
+    max-width: 45%;
+    margin: auto;
+    padding-top: 15px;
+    text-align: end;
+}
+
+/* CTA SECTION*/
+
+.cta {
+    margin: 40px auto ;
+}
+.highlight {
+    background-color: #3882f6;
+    padding: 40px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    max-width: 70%;
+}
+
+.htitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #f9faf8;
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+.hsupport {
+    font-size: 16px;
+    font-weight: 200;
+    color: #f9faf8;
+    margin: 0%;
+}
+
+.highlight #hbutt {
+    border: #f9faf8 solid 2px;
+    border-radius: 10px;
+}
