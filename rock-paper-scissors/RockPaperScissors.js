@@ -19,14 +19,14 @@ function getComputerChoice() {
     }
 }
 
-//accept intput into a prompt, and then capitalize the answer
+//accept input into a prompt, and then capitalize the answer
 function getHumanChoice() {
     let answer = prompt("Choose rock, paper, or scissors: ");
     return answer.charAt(0).toUpperCase() + answer.slice(1).toLowerCase();
     
 }
 
-//
+//controls the constrast between what the use entered and what number the computer chose. Using an if statement, it will then compare the answers and return who won or if they tied
 function playRound(humanChoice, computerChoice, hScore, cScore) {
     if (humanChoice === computerChoice) {
         console.log("You tied! Try again.");
@@ -46,29 +46,35 @@ function playRound(humanChoice, computerChoice, hScore, cScore) {
     }
 }
 
+//full 5 rounds played
 function playGame() {
     //initialize scores of human and computer
     let humanScore = 0;
     let computerScore = 0;
 
+    //for loop controlling playing rounds and incrementing the score
     for (let i = 0; i < 5; i++) {
         const humanSelection = getHumanChoice();
         const computerSelection = getComputerChoice();
 
         const result = playRound(humanSelection, computerSelection);
 
+        //score increment
         if (result === "human") {
             humanScore++;
         } else if (result === "computer") {
             computerScore++;
         }
 
+        //prints the ongoing score count
         console.log(`Score - You: ${humanScore}, Computer: ${computerScore}`);
     }
 
+    //print the final score once all 5 rounds are played
     console.log("\n=== FINAL SCORE ===");
     console.log(`You: ${humanScore}, Computer: ${computerScore}`);
 
+    //compares whoever has the most points and outputs who won
     if (humanScore > computerScore) {
         console.log("You won the game!");
     } else if (computerScore > humanScore) {
@@ -78,4 +84,5 @@ function playGame() {
     }
 }
 
+//runs the program
 playGame();
